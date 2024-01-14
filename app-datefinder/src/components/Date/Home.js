@@ -1,12 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './style.css'; // Importe o arquivo CSS
-import logo from '../../img/logo.png';  // Ajuste o caminho da importação
+import './style.css'; 
+import logo from '../../img/logo.png';  
 
 const Home = () => {
   return (
     <div>
-      <img id="logoIndex" src={logo} alt="logo" /> {/* Use a variável logo para o caminho da imagem */}
+      <img id="logoIndex" src={logo} alt="logo" /> {
+        
+      }
       <br />
 
       <div className="boxIndex">

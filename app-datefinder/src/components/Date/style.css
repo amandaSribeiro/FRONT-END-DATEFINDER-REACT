@@ -1,76 +1,103 @@
-/* style.css */
+/* Geral*/
+.botao {
+  border-radius: 50px;
+  border: none;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  color: #fff;
+  text-align: center;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
 
+h1 {
+  width: 900px;
+  height: 172px;
+  color: #000;
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 10px;
+}
+
+/* Home*/
 #logoIndex {
-    width: 509.6px;
-    height: 120.4px;
-    margin: 0 auto;
-    display: block;
-    flex-shrink: 0;
-    margin: 0 auto;
-    text-align: center;
-    margin-top: 60px;
-  }
+  width: 509.6px;
+  height: 120.4px;
+  margin: 0 auto;
+  display: block;
+  flex-shrink: 0;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.boxIndex {
+  width: 941px;
+  height: 451px;
+  flex-shrink: 0;
+  margin: 0 auto;
+  border-radius: 50px;
+  background: #fff5e0;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+#Cadastrar {
+  background: #ff6969;
+  width: 243px;
+  height: 83px;
+  flex-shrink: 0;
+  margin-left: 10px;
+}
+
+#Encontrar {
+  background: #141e46;
+  width: 244px;
+  height: 83px;
+  flex-shrink: 0;
+  margin-left: 60px;
+}
+
+/*add date*/
+#logoNormal {
+  width: 344.654px;
+  height: 97px;
+  flex-shrink: 0;
+}
+
+.boxAdd {
+  width: 989px;
+  height: 1324px;
+  flex-shrink: 0;
+  border-radius: 50px;
+  background: #FFF5E0;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.labelDate {
+  color: #000;
+  font-family: Inter;
+  font-size: 30px;
+  font-style: normal;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 640;
   
-  #logoNormal {
-    width: 344.654px;
-    height: 97px;
-    flex-shrink: 0;
-  }
-  
-  body {
-    background-color: #c70039;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 45px;
-  }
-  
-  .boxIndex {
-    width: 941px;
-    height: 451px;
-    flex-shrink: 0;
-    margin: 0 auto;
-    border-radius: 50px;
-    background: #fff5e0;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
-  }
-  
-  h1 {
-    width: 900px;
-    height: 172px;
-    color: #000;
-    text-align: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 45px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin-top: 10px;
-  }
-  
-  .botao {
-    border-radius: 50px;
-    border: none;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
-    color: #fff;
-    text-align: center;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
-  
-  #Cadastrar {
-    background: #ff6969;
-    width: 243px;
-    height: 83px;
-    flex-shrink: 0;
-    margin-left: 10px;
-  }
-  
-  #Encontrar {
-    background: #141e46;
-    width: 244px;
-    height: 83px;
-    flex-shrink: 0;
-    margin-left: 60px;
-  }
-  
+}
+
+input {
+  border-radius: 50px;
+  background-color: #FFF;
+  border-color: white;
+  font-family: Inter;
+  font-size: 20px;
+  width:200px;
+}
+
+
+.tableForm{
+  margin: 0 auto;
+}
