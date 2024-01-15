@@ -55,8 +55,10 @@ const ListDates = () => {
                             }
                         </tbody>
                     </table>
-                    <p><Link to="/addDate">Adicionar novo Date</Link></p>
                 </div>
+                <Link to="/addDate"><button id='btnNewDate'>Adicionar novo Date</button></Link>
+
+        
             </div>
         </body>
     )

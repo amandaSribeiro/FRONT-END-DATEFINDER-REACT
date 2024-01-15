@@ -152,47 +152,109 @@ input {
 }
 
 /*list date*/
-
-.boxList{
+.boxList {
   width: 600px;
   height: 750px;
+  overflow-y: auto; /* Adicione rolagem vertical quando necessário */
+  border-radius: 9%;
+  background: #FFF5E0;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  margin: auto;
+  margin-top: 20%;
+}
+
+.h1List {
+  margin-top: 40px;
+  text-align: center;
+  margin-left: 10px;
+}
+
+/*list date*/
+.boxList {
+  width: 600px;
+  max-height: 950px;
+  overflow-y: auto;
   border-radius: 9%;
   background: #FFF5E0;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
   margin: auto;
   margin-top: 25%;
-}
+  position: relative; 
 
-.h1List{
-  padding-top: 10%;
+  }
+.h1List {
+  top: 10%;
   text-align: center;
   margin-left: 10px;
 }
 
-.tableList{
+th {
+  color: #C70039;
+  position: relative; 
+}
+
+#btnNewDate {
   position: absolute;
-  top: 41%;
-  padding-left: 5%;
+  top: 20%;
+  right: 95px;
+  background-color: #141e46;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+#btnNewDate:hover{
+  background-color: #C70039;
+}
+td {
+  color: #000;
+}
+
+.tableList {
+  width: 100%;
+  margin: 10px auto;
+  border-collapse: collapse;
+  position: absolute;
+  top: 30%;
+  padding-left: 19%;
   display: block;
   text-align: left;
 }
 
-th{
-  color:#C70039;
+.tableList th,
+.tableList td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
 }
 
-td{
-  color: #000;
+.tableList th {
+  background-color: #f2f2f2;
 }
 
-.botaoList{
-  width: 50%;
-  height: 30px;
-  flex-shrink: 0;
-  border-radius: 50px;
-  color: #fff;
-  border-radius: 50px;
+.botaoList {
+  background-color: #C70039;
+  color: white;
   border: none;
-  font-size: 50%;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.botaoList:hover {
+  background-color: #141e46;
+}
+
+.tableList td button {
+  display: inline;
+  margin-bottom: 5px;
 }
