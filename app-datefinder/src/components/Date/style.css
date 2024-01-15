@@ -1,10 +1,12 @@
 /* Geral*/
-
+body{
+  background-color: #C70039; 
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 h1 {
   width: 900x;
   height: 172px;
   color: #000;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 45px;
   font-style: normal;
   font-weight: 400;
@@ -91,7 +93,7 @@ h1 {
 
 .boxAdd {
   width: 600px;
-  height: 700px;
+  height: 750px;
   border-radius: 9%;
   background: #FFF5E0;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
@@ -103,7 +105,7 @@ h1 {
 #h1CadDate {
   padding-top: 10%;
   text-align: center;
-  margin-left: 10px; /* Ajuste conforme necessário para a separação entre os elementos */
+  margin-left: 10px;
 }
 
 .labelDate {
@@ -122,10 +124,10 @@ input {
   border-color: white;
   font-family: Inter;
   font-size: 90%;
-  width: 100%;
-  height: 10px;
+  width: 79%;
+  height: 15px;
   padding: 10px;
-  margin-left: 9%;
+  margin-left: 2%;
 }
 
 .tableForm td .labelDate {
@@ -135,11 +137,11 @@ input {
 
 .tableForm {
   position: absolute;
-  top: 45%;
+  top: 41%;
 }
 
 #cadastrarDate {
-  margin-top: 45%;
+  margin-top: 55%;
   background: #FF6969;
 }
 
@@ -147,4 +149,50 @@ input {
   margin-top: 3%;
   background: #141e46;
 
+}
+
+/*list date*/
+
+.boxList{
+  width: 600px;
+  height: 750px;
+  border-radius: 9%;
+  background: #FFF5E0;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  margin: auto;
+  margin-top: 25%;
+}
+
+.h1List{
+  padding-top: 10%;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.tableList{
+  position: absolute;
+  top: 41%;
+  padding-left: 5%;
+  display: block;
+  text-align: left;
+}
+
+th{
+  color:#C70039;
+}
+
+td{
+  color: #000;
+}
+
+.botaoList{
+  width: 50%;
+  height: 30px;
+  flex-shrink: 0;
+  border-radius: 50px;
+  color: #fff;
+  border-radius: 50px;
+  border: none;
+  font-size: 50%;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
 }
