@@ -13,14 +13,14 @@ const ReadDate = () => {
                 setDate(res.data);
             })
             .catch(err => console.log(err));
-    }, [id]); // Adicione 'id' ao array de dependências
+    }, [id]); 
     
     return (
-        <div className="container">
-            <div className='row'>
-                <div className='col-md-12'>
+        <div>
+            <div>
+                <div>
                     <h1>Detalhes do Date</h1>
-                    <table className="table">
+                    <table>
                         <thead>
                             <tr>
                                 <th>Título</th>

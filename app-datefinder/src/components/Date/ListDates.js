@@ -2,6 +2,9 @@ import React from 'react'
 import { useEffect } from "react";
 import { useState } from "react";
 import logo from '../../img/logo.png';
+import excluir from '../../img/excluir.png';
+import editar from '../../img/editar.png';
+import ler from '../../img/ler.png';
 import axios from "axios";
 import { Link } from "react-router-dom";
 
@@ -29,9 +32,9 @@ const ListDates = () => {
     };
     return (
         <body>
-            <img id="logoNormal" src={logo} alt="logo" />
+            <Link to="/Home"><img id="logoNormal" src={logo} alt="logo" /></Link>
             <div className='boxList'>
-                <h1 className='h1List'>Listando Dates</h1>
+                <h1 className='h1List'>Dates Cadastrados</h1>
                 <div>
                     <table className='tableList'>
                         <thead>
@@ -45,9 +48,18 @@ const ListDates = () => {
                                     <tr>
                                         <td>{date.titulo}</td>
                                         <td>
-                                            <Link to={`/readDate/${date.id}`}><button className='botaoList'>Ler</button></Link>
-                                            <Link to={`/updateDate/${date.id}`}><button className='botaoList'>Editar</button></Link>
-                                            <button className='botaoList' onClick={() => handleDelete(date.id)}>Deletar</button>
+                                            <Link to={`/readDate/${date.id}`}>
+                                                <button className='botaoList'>
+                                                <img src={ler} alt="Ícone de Ler" />
+                                                </button>
+                                            </Link>
+                                            <Link to={`/updateDate/${date.id}`}>
+                                                <button className='botaoList'>
+                                                    <img src={editar} alt="Ícone de Editar" />
+                                                </button>
+                                            </Link>
+                                            <button className='botaoList' onClick={() => handleDelete(date.id)}><img src={excluir} alt="Ícone de Deletar" /></button>
+
                                         </td>
                                     </tr>
                                 )
@@ -58,7 +70,7 @@ const ListDates = () => {
                 </div>
                 <Link to="/addDate"><button id='btnNewDate'>Adicionar novo Date</button></Link>
 
-        
+
             </div>
         </body>
     )

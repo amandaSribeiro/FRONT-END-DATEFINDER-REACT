@@ -34,54 +34,79 @@ const AddEditora = () => {
 
     return (
         <body>
-                <img id="logoNormal" src={logo} alt="logo" />
-                <div className='boxAdd'>
-                    <h1 id='h1CadDate'>Cadastrar Date</h1>
-                    <form className='formAdd'>
-                        <table className='tableForm'>
-                            <tr>
-                                <td><label className='labelDate'>Título:</label></td>
-                                <td><input type="text" id="titulo" name="titulo" onChange={handleChange} /></td>
-                            </tr>
+            <Link to="/Home"> <img id="logoNormal" src={logo} alt="logo" /></Link>
+            <div className='boxAdd'>
+                <h1 id='h1CadDate'>Cadastrar Date</h1>
+                <form className='formAdd'>
+                    <table className='tableForm'>
+                        <div id='formDateT'>
+                            <label className='labelDate'>Título:</label>
+                            <input type="text" id="titulo" name="titulo" onChange={handleChange} />
+                        </div>
+                        <div id='formDateT'>
+                            <label className='labelDate'>Endereço:</label>
+                            <input type="text" id="endereco" name="endereco" onChange={handleChange} />
+                        </div>
 
-                            <tr>
-                                <td><label className='labelDate'>Endereço:</label></td>
-                                <td><input type="text" id="endereco" name="endereco" onChange={handleChange} /></td>
-                            </tr>
+                        <div id='formDateT'>
+                            <label className='labelDate'>Custo:</label>
+                            <div className='radioGroup'>
+                                <input type="radio" id="custo_baixo" name="custo" value="baixo" onChange={handleChange} />
+                                <label htmlFor="custo_baixo">Baixo</label>
 
-                            <tr>
-                                <td><label className='labelDate'>Custo:</label></td>
-                                <td><input type="text" id="custo" name="custo" onChange={handleChange} /></td>
-                            </tr>
+                                <input type="radio" id="custo_medio" name="custo" value="medio" onChange={handleChange} />
+                                <label htmlFor="custo_medio">Médio</label>
 
-                            <tr>
-                                <td><label className='labelDate'>Encontro Duplo:</label></td>
-                                <td><input type="text" id="encontro_duplo" name="encontro_duplo" onChange={handleChange} /></td>
-                            </tr>
+                                <input type="radio" id="custo_alto" name="custo" value="alto" onChange={handleChange} />
+                                <label htmlFor="custo_alto">Alto</label>
+                            </div>
+                        </div>
 
-                            <tr>
-                                <td><label className='labelDate'>Em casa:</label></td>
-                                <td><input type="text" id="em_casa" name="em_casa" onChange={handleChange} /></td>
-                            </tr>
+                        <div id='formDateT'>
+                            <label className='labelDate'>Encontro Duplo:</label>
+                            <div className='radioGroup'>
+                                <input type="radio" id="encontro_duplo_sim" name="encontro_duplo" value="sim" onChange={handleChange} />
+                                <label htmlFor="encontro_duplo_sim">Sim</label>
+                                <input type="radio" id="encontro_duplo_nao" name="encontro_duplo" value="nao" onChange={handleChange} />
+                                <label htmlFor="encontro_duplo_nao">Não</label>
+                            </div>
+                        </div>
 
-                            <tr>
-                                <td><label className='labelDate'>Agendamento:</label></td>
-                                <td><input type="text" id="agendamento" name="agendamento" onChange={handleChange} /></td>
-                            </tr>
+                        <div id='formDateT'>
+                            <label className='labelDate'>Em casa:</label>
+                            <div className='radioGroup'>
+                                <input type="radio" id="em_casa_sim" name="em_casa" value="sim" onChange={handleChange} />
+                                <label htmlFor="em_casa_sim">Sim</label>
 
-                            <tr>
-                                <td><label className='labelDate'> Descrição:</label></td>
-                                <td><input type="text" id="descricao" name="descricao" onChange={handleChange} /></td>
-                            </tr>
-                        </table>
-                    </form>
+                                <input type="radio" id="em_casa_nao" name="em_casa" value="nao" onChange={handleChange} />
+                                <label htmlFor="em_casa_nao">Não</label>
+                            </div>
+                        </div>
 
-                    <button id='cadastrarDate' type="submit" onClick={handleClick} className='botaoGeral'>
-                        Cadastrar
-                    </button>
-                    <br />
-                    <Link to="/date"><button id='encontrarDate' className='botaoGeral'>Encontrar</button></Link>
-                </div>
+                        <div id='formDateT'>
+                            <label className='labelDate'>Agendamento:</label>
+                            <div className='radioGroup'>
+                                <input type="radio" id="agendamento_sim" name="agendamento" value="sim" onChange={handleChange} />
+                                <label htmlFor="agendamento_sim">Sim</label>
+
+                                <input type="radio" id="agendamento_nao" name="agendamento" value="nao" onChange={handleChange} />
+                                <label htmlFor="agendamento_nao">Não</label>
+                            </div>
+                        </div>
+
+                        <div id='formDateT'>
+                            <label className='labelDate'> Descrição:</label>
+                            <input type="text" id="descricao" name="descricao" onChange={handleChange} />
+                        </div>
+                    </table>
+                </form>
+
+                <button id='cadastrarDate' type="submit" onClick={handleClick} className='botaoGeral'>
+                    Cadastrar
+                </button>
+                <br />
+                <Link to="/date"><button id='encontrarDate' className='botaoGeral'>Encontrar</button></Link>
+            </div>
         </body>
     );
 };
