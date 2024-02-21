@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from "axios";
 import logo from '../../img/logo.png';
-import seta from '../../img/seta.png';
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -33,7 +32,7 @@ const AddEditora = () => {
     };
 
     return (
-        <body>
+        <body className='bodyPages'>
             <Link to="/Home"> <img id="logoNormal" src={logo} alt="logo" /></Link>
             <div className='boxAdd'>
                 <h1 id='h1CadDate'>Cadastrar Date</h1>

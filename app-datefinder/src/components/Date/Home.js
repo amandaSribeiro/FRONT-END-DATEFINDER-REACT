@@ -5,7 +5,7 @@ import logo from '../../img/logo.png';
 
 const Home = () => {
   return (
-    <body>
+    <body className='bodyPages'>
       <div>
         <img id="logoIndex" src={logo} alt="logo" />
 

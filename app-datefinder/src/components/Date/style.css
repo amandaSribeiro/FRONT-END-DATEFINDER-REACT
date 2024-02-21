@@ -8,7 +8,7 @@ h1 {
   width: 900x;
   height: 172px;
   color: #000;
-  font-size: 1.5em;
+  font-size: 1.7em;
   font-style: normal;
   font-weight: 400;
 }
@@ -162,73 +162,104 @@ input {
   background: #141e46;
 }
 
+
 /*list date*/
+
 .boxList {
-  width: 23em;
-  height: 27.5em;
-  border-radius: 9%;
-  background: #FFF5E0;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  width: 50em;
+  height: 50em;
+  border-radius: 1%;
+  background: #ffffff;
   margin: auto;
   margin-top: 2em;
   overflow-y: auto; /* rolagem vertical quando necessário */
 
 }
-
-.h1List {
-  margin-top: 40px;
-  text-align: center;
-  margin-left: 10px;
+#box-h1-btn-add {
+  background-color: #f8f7f7;
+  display: flex;
+  align-items: center ;
+  
 }
 
-th {
-  color: #C70039;
-  position: relative;
+.h2List {
+  margin-top: 0px;
+  padding-top: 1em;
+  text-align: left;
+  margin-left: 10px;
+  color: #000;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 400;
+  margin-left: 1em;
 }
 
 #btnNewDate {
-  position: relative;
-  top: -8em;
-  left: 10em;
   background-color: #141e46;
   color: white;
   border: none;
-  padding: 8px 16px;
-  text-align: center;
   text-decoration: none;
   font-size: 14px;
   cursor: pointer;
-  border-radius: 20px;
-}
+  border-radius: 2cm;
+  width: 6em;
+  height: 2.5em;
+  margin-left: 900px;
 
+}
 #btnNewDate:hover {
   background-color: #C70039;
 }
+
+#box-filtro{
+  background-color: #f8f7f7;
+  display: flex;
+  align-items: center ;
+}
+
+#box-filtro img{
+  width: 22px;
+  height: 22px;
+  top: 1px;
+  margin-left: 30px;
+  margin-bottom: 10px;
+
+}
+#filtro {
+  margin-left: 1em;
+  font-size: 15px;
+  width: 10em;
+  height: 0.5em;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  margin-bottom: 10px;
+ 
+
+}
+th {
+  color: #ffffff;
+}
+
 
 td {
   color: #000;
 }
 
 .tableList {
-  width: 100%;
-  margin: 10px auto;
+  width: 50em;
   border-collapse: collapse;
-  position: absolute;
-  top: 30%;
-  padding-left: 10%;
-  display: block;
-  text-align: left;
 }
 
 .tableList th,
 .tableList td {
   border: 1px solid #ddd;
   padding: 12px;
-  text-align: left;
+  text-align: center;
 }
 
 .tableList th {
-  background-color: #f2f2f2;
+  background-color: #C70039;
 }
 
 .botaoList {
@@ -249,7 +280,7 @@ td {
 }
 
 .botaoList:hover {
-  background-color: #FF6969;
+  background-color: #edebeb;
 }
 
 .tableList td button {
