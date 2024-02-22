@@ -4,8 +4,7 @@ import logo from '../../img/logo.png';
 import excluir from '../../img/excluir.png';
 import editar from '../../img/editar.png';
 import ler from '../../img/ler.png';
-import pesquisa from '../../img/pesquisa.png'
-import './style.css';
+import pesquisa from '../../img/pesquisa.png';
 import axios from 'axios';
 
 const ListDates = () => {
@@ -42,21 +41,21 @@ const ListDates = () => {
   );
 
   return (
-    <body>
+    <div>
       <Link to="/Home">
         <img id="logoNormal" src={logo} alt="logo" />
       </Link>
       <div className="boxList">
-        <div id='box-h1-btn-add'>
+        <div id="box-h1-btn-add">
           <h2 className="h2List">Listagem de Dates </h2>
           <Link to="/addDate">
             <button id="btnNewDate">Novo Date</button>
           </Link>
         </div>
-        <div id='box-filtro'>
+        <div id="box-filtro">
           <img src={pesquisa} alt="Ícone de Pesquisar" />
           <input
-            id='filtro'
+            id="filtro"
             type="text"
             placeholder="Digite a letra inicial"
             value={filtro}
@@ -105,7 +104,7 @@ const ListDates = () => {
           </tbody>
         </table>
       </div>
-    </body>
+    </div>
   );
 };
 
