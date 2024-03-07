@@ -40,11 +40,11 @@ const AddEditora = () => {
                     <table className='tableForm'>
                         <div id='formDateT'>
                             <label className='labelDate'>Título:</label>
-                            <input type="text" id="titulo" name="titulo" onChange={handleChange} />
+                            <input type="text" id="titulo" name="titulo" required onChange={handleChange} />
                         </div>
                         <div id='formDateT'>
                             <label className='labelDate'>Endereço:</label>
-                            <input type="text" id="endereco" name="endereco" onChange={handleChange} />
+                            <input type="text" id="endereco" name="endereco" required onChange={handleChange} />
                         </div>
 
                         <div id='formDateT'>
@@ -104,7 +104,6 @@ const AddEditora = () => {
                     Cadastrar
                 </button>
                 <br />
-                <Link to="/date"><button id='encontrarDate' className='botaoGeral'>Encontrar</button></Link>
             </div>
         </body>
     );

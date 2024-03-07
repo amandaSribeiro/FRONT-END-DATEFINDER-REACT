@@ -5,11 +5,15 @@ import excluir from '../../img/excluir.png';
 import editar from '../../img/editar.png';
 import ler from '../../img/ler.png';
 import pesquisa from '../../img/pesquisa.png';
+import Modal from 'react-modal';
 import axios from 'axios';
 
 const ListDates = () => {
   const [dates, setDates] = useState([]);
   const [filtro, setFiltro] = useState('');
+  const [editModalIsOpen, setEditModalIsOpen] = useState(false);
+  const [modalIsOpen, setIsOpen] = useState(false);
+  const [selectedDate, setSelectedDate] = useState(null);
 
   useEffect(() => {
     const fetchAllDates = async () => {
@@ -22,6 +26,16 @@ const ListDates = () => {
     };
     fetchAllDates();
   }, []);
+
+  const abrirModal = (date) => {
+    setSelectedDate(date);
+    setIsOpen(true);
+  };
+
+  const fecharModal = () => {
+    setSelectedDate(null);
+    setIsOpen(false);
+  };
 
   const handleDelete = async (id) => {
     try {
@@ -48,9 +62,11 @@ const ListDates = () => {
       <div className="boxList">
         <div id="box-h1-btn-add">
           <h2 className="h2List">Listagem de Dates </h2>
-          <Link to="/addDate">
-            <button id="btnNewDate">Novo Date</button>
-          </Link>
+          <div>
+            <button id="btnNewDate">
+              <Link to="/addDate" id='linkAdd'>Novo Date</Link>
+            </button>
+          </div>
         </div>
         <div id="box-filtro">
           <img src={pesquisa} alt="Ícone de Pesquisar" />
@@ -82,13 +98,11 @@ const ListDates = () => {
                 <td>{date.em_casa}</td>
                 <td>{date.agendamento}</td>
                 <td>
-                  <Link to={`/readDate/${date.id}`}>
-                    <button className="botaoList">
-                      <img src={ler} alt="Ícone de Ler" />
-                    </button>
-                  </Link>
+                  <button className="botaoList" onClick={() => abrirModal(date)}>
+                    <img src={ler} alt="Ícone de Ler" />
+                  </button>
                   <Link to={`/updateDate/${date.id}`}>
-                    <button className="botaoList">
+                    <button className="botaoList" onClick={() => abrirModal(date)}>
                       <img src={editar} alt="Ícone de Editar" />
                     </button>
                   </Link>
@@ -104,6 +118,48 @@ const ListDates = () => {
           </tbody>
         </table>
       </div>
+      <Modal isOpen={modalIsOpen} onRequestClose={fecharModal}>
+        <div>
+          <h2 id='h2Modal'>Detalhes do Date</h2>
+          <div className="tbModal">
+            <div className="tbModalRow">
+              <div className="tbModalTitle">Título:</div>
+              <div className="tbModalContent">{selectedDate?.titulo}</div>
+            </div>
+
+            <div className="tbModalRow">
+              <div className="tbModalTitle">Endereço:</div>
+              <div className="tbModalContent">{selectedDate?.endereco}</div>
+            </div>
+
+            <div className="tbModalRow">
+              <div className="tbModalTitle">Custo:</div>
+              <div className="tbModalContent">{selectedDate?.custo}</div>
+            </div>
+
+            <div className="tbModalRow">
+              <div className="tbModalTitle">Encontro Duplo:</div>
+              <div className="tbModalContent">{selectedDate?.encontro_duplo}</div>
+            </div>
+
+            <div className="tbModalRow">
+              <div className="tbModalTitle">Em Casa:</div>
+              <div className="tbModalContent">{selectedDate?.em_casa}</div>
+            </div>
+
+            <div className="tbModalRow">
+              <div className="tbModalTitle">Agendamento:</div>
+              <div className="tbModalContent">{selectedDate?.agendamento}</div>
+            </div>
+
+            <div className="tbModalRow">
+              <div className="tbModalTitle">Descrição:</div>
+              <div className="tbModalContent">{selectedDate?.descricao}</div>
+            </div>
+          </div>
+          <button className='btnCloseModal' onClick={fecharModal}>Fechar Modal</button>
+        </div>
+      </Modal>
     </div>
   );
 };

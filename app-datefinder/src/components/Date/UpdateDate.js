@@ -30,7 +30,7 @@ function UpdateDate() {
     try {
       await axios.put(`http://localhost:8081/date/${id}`, {
         descricao: date.descricao,
-        en_casa: date.en_casa,
+        en_casa: date.em_casa,
         encontro_duplo: date.encontro_duplo,
       });
       navigate("/date");
