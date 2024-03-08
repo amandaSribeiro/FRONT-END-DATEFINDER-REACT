@@ -27,6 +27,7 @@ const ListDates = () => {
     fetchAllDates();
   }, []);
 
+  
   const abrirModal = (date) => {
     setSelectedDate(date);
     setIsOpen(true);
@@ -98,14 +99,65 @@ const ListDates = () => {
                 <td>{date.em_casa}</td>
                 <td>{date.agendamento}</td>
                 <td>
+
+                  {/ * Botão de Ler + Modal com os dados do Date */}
+
                   <button className="botaoList" onClick={() => abrirModal(date)}>
                     <img src={ler} alt="Ícone de Ler" />
                   </button>
+                  <Modal isOpen={modalIsOpen} onRequestClose={fecharModal}>
+                    <div>
+                      <h2 id='h2Modal'>Detalhes do Date</h2>
+                      <div className="tbModal">
+                        <div className="tbModalRow">
+                          <div className="tbModalTitle">Título:</div>
+                          <div className="tbModalContent">{selectedDate?.titulo}</div>
+                        </div>
+
+                        <div className="tbModalRow">
+                          <div className="tbModalTitle">Endereço:</div>
+                          <div className="tbModalContent">{selectedDate?.endereco}</div>
+                        </div>
+
+                        <div className="tbModalRow">
+                          <div className="tbModalTitle">Custo:</div>
+                          <div className="tbModalContent">{selectedDate?.custo}</div>
+                        </div>
+
+                        <div className="tbModalRow">
+                          <div className="tbModalTitle">Encontro Duplo:</div>
+                          <div className="tbModalContent">{selectedDate?.encontro_duplo}</div>
+                        </div>
+
+                        <div className="tbModalRow">
+                          <div className="tbModalTitle">Em Casa:</div>
+                          <div className="tbModalContent">{selectedDate?.em_casa}</div>
+                        </div>
+
+                        <div className="tbModalRow">
+                          <div className="tbModalTitle">Agendamento:</div>
+                          <div className="tbModalContent">{selectedDate?.agendamento}</div>
+                        </div>
+
+                        <div className="tbModalRow">
+                          <div className="tbModalTitle">Descrição:</div>
+                          <div className="tbModalContent">{selectedDate?.descricao}</div>
+                        </div>
+                      </div>
+                      <button className='btnCloseModal' onClick={fecharModal}>Fechar Modal</button>
+                    </div>
+                  </Modal>
+
+                  {/ * Botão de Editar + Modal com o form de edição dos dados permitidos para alteração*/}
+
                   <Link to={`/updateDate/${date.id}`}>
                     <button className="botaoList" onClick={() => abrirModal(date)}>
                       <img src={editar} alt="Ícone de Editar" />
                     </button>
                   </Link>
+
+                  {/ * Botão de Deletar + Modal de decisão*/}
+
                   <button
                     className="botaoList"
                     onClick={() => handleDelete(date.id)}
@@ -118,48 +170,7 @@ const ListDates = () => {
           </tbody>
         </table>
       </div>
-      <Modal isOpen={modalIsOpen} onRequestClose={fecharModal}>
-        <div>
-          <h2 id='h2Modal'>Detalhes do Date</h2>
-          <div className="tbModal">
-            <div className="tbModalRow">
-              <div className="tbModalTitle">Título:</div>
-              <div className="tbModalContent">{selectedDate?.titulo}</div>
-            </div>
 
-            <div className="tbModalRow">
-              <div className="tbModalTitle">Endereço:</div>
-              <div className="tbModalContent">{selectedDate?.endereco}</div>
-            </div>
-
-            <div className="tbModalRow">
-              <div className="tbModalTitle">Custo:</div>
-              <div className="tbModalContent">{selectedDate?.custo}</div>
-            </div>
-
-            <div className="tbModalRow">
-              <div className="tbModalTitle">Encontro Duplo:</div>
-              <div className="tbModalContent">{selectedDate?.encontro_duplo}</div>
-            </div>
-
-            <div className="tbModalRow">
-              <div className="tbModalTitle">Em Casa:</div>
-              <div className="tbModalContent">{selectedDate?.em_casa}</div>
-            </div>
-
-            <div className="tbModalRow">
-              <div className="tbModalTitle">Agendamento:</div>
-              <div className="tbModalContent">{selectedDate?.agendamento}</div>
-            </div>
-
-            <div className="tbModalRow">
-              <div className="tbModalTitle">Descrição:</div>
-              <div className="tbModalContent">{selectedDate?.descricao}</div>
-            </div>
-          </div>
-          <button className='btnCloseModal' onClick={fecharModal}>Fechar Modal</button>
-        </div>
-      </Modal>
     </div>
   );
 };
